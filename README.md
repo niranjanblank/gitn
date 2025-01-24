@@ -44,7 +44,7 @@ ngit/
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/ngit.git
+   git clone https://github.com/niranjanblank/gitn
    cd ngit
    ```
 
