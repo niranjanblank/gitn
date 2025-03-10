@@ -1,9 +1,11 @@
 #include<iostream>
 #include<string>
 #include "GitRepository.h"
+#include <zlib.h>
 
 
 int main(int argc, char* argv[]) {
+   std::cout << "Using zlib version: " << zlibVersion() << std::endl;
     try {
         if (argc < 2) {
             std::cout << "Print Help here\n";
