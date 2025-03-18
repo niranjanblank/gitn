@@ -2,10 +2,12 @@
 #include<string>
 #include "GitRepository.h"
 #include <zlib.h>
+#include "GitBlob.h"
+#include "GitUtils.h"
 
 
 int main(int argc, char* argv[]) {
-   std::cout << "Using zlib version: " << zlibVersion() << std::endl;
+  
     try {
         if (argc < 2) {
             std::cout << "Print Help here\n";
@@ -18,7 +20,17 @@ int main(int argc, char* argv[]) {
         if (command == "init") {
             GitRepository repo;
             repo.initialize();
-        } else {
+        } 
+        else if(command == "test"){
+          std::cout << "Using zlib version: " << zlibVersion() << std::endl;
+          GitRepository repo;
+          GitBlob obj;
+
+          // Call GitUtils::writeObject and print the SHA-1 hash
+            std::string sha = GitUtils::writeObject(obj, repo);
+            std::cout << "Generated SHA-1: " << sha << std::endl;
+        }
+        else {
             std::cout << "Unknown command: " << command << "\n";
         }
 

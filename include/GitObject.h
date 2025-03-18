@@ -16,9 +16,10 @@ class GitObject{
 
     // pure virtual functions, they need to be implemented by derived classes
     virtual void deserialize(const std::string& data) = 0;
-    virtual std::string serialize() const = 0; 
-    
+    virtual std::string serialize() const = 0;
+
     std::string getType() const {return objectType;}
+
 };
 
 #endif

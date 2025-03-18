@@ -29,3 +29,7 @@ target_include_directories(gitn PRIVATE ${INCLUDE_DIR})
 find_package(ZLIB REQUIRED)
 target_link_libraries(gitn PRIVATE ZLIB::ZLIB)
 
+# Find and link OpenSSL
+find_package(OpenSSL REQUIRED)
+target_link_libraries(gitn PRIVATE OpenSSL::SSL OpenSSL::Crypto)
+
