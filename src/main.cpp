@@ -29,6 +29,9 @@ int main(int argc, char* argv[]) {
           // Call GitUtils::writeObject and print the SHA-1 hash
             std::string sha = GitUtils::writeObject(obj, repo);
             std::cout << "Generated SHA-1: " << sha << std::endl;
+
+            std::cout << GitUtils::repoPath("a","s") << std::endl;
+            std::cout << "Create directory: " << GitUtils::repoDir(true, "objects","sh");
         }
         else {
             std::cout << "Unknown command: " << command << "\n";

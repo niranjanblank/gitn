@@ -23,3 +23,5 @@ std::string GitUtils::writeObject(const GitObject& obj, GitRepository& repo){
     
  return sha1Hex("Git object test");
 }
+
+
